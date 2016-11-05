@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1478306214 source:c:\users\graha\documents\codeblocksprojects\continuousgalerkin\cgmesh.cpp
+	"CGMesh.h"
+
+1478306084 c:\users\graha\documents\codeblocksprojects\continuousgalerkin\cgmesh.h
+
+1478306752 source:c:\users\graha\documents\codeblocksprojects\continuousgalerkin\main.cpp
+	<iostream>
+	<cstdlib>
+	"CGMesh.h"
+	"Macros.h"
+
+1478306798 c:\users\graha\documents\codeblocksprojects\continuousgalerkin\macros.h
+
