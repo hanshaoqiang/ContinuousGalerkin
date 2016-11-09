@@ -31,11 +31,12 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="include" />
 		</Compiler>
-		<Unit filename="CGMesh.cpp" />
-		<Unit filename="CGMesh.h" />
-		<Unit filename="Macros.h" />
+		<Unit filename="include/CGMesh.h" />
+		<Unit filename="include/Macros.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/CGMesh.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
