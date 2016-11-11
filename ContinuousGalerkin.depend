@@ -14,3 +14,20 @@
 
 1478559112 c:\users\graha\documents\codeblocksprojects\continuousgalerkin\include\macros.h
 
+1478843412 source:c:\users\graham\programming\cpp\continuousgalerkin\main.cpp
+	<iostream>
+	"Macros.h"
+	"CGMesh.h"
+
+1478821564 c:\users\graham\programming\cpp\continuousgalerkin\include\macros.h
+	<cstdlib>
+	<iomanip>
+
+1478675170 c:\users\graham\programming\cpp\continuousgalerkin\include\cgmesh.h
+	"Macros.h"
+	<iostream>
+
+1478821707 source:c:\users\graham\programming\cpp\continuousgalerkin\src\cgmesh.cpp
+	"CGMesh.h"
+	<iostream>
+

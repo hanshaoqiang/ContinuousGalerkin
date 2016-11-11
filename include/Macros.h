@@ -1,9 +1,11 @@
 #ifdef DEBUG
+#include <cstdlib>
+#include <iomanip>
 
 // Check a condition x for truth. If it isn't true, output y and exit the program.
 #define GH_Assert(x,y) if(!(x)){ std::cout << "Error! " << y << "\n"; std::cout << "Exiting...\n"; exit(EXIT_FAILURE); }
 // Print a variable y by tagging it with the string x.
-#define GH_Print(x,y) { std::cout << x << ": " << y << "\n"; }
+#define GH_Print(x,y) { std::cout << x << ": " << std::setw(15) << y << "\n"; }
 
 #else
 

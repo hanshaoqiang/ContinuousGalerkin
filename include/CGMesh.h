@@ -4,6 +4,9 @@
 #include "Macros.h"
 #include <iostream>
 
+// ******************************** //
+// Class triMesh
+// ******************************** //
 class triMesh
 {
     public:

@@ -12,13 +12,16 @@ triMesh::triMesh()
 
 // *********************************************** //
 // Constructor: divides the square (0,0), (x,y)
-// into a grid
+// into a grid of n^2 squares and then split them
+// Note: n = 5000 gives 25M DOF, so keep n<5000
 // *********************************************** //
-
 triMesh::triMesh(double x, double y, int n)
   : nNodes((n+1)*(n+1))
   , nElmts(2*n*n)
 {
+    std::cout << "Number of nodes: " << nNodes << std::endl;
+    std::cout << "Number of elements: " << nElmts << std::endl;
+
     GH_Assert((x!=0 && y!=0),"TriMesh constructor is called for an empty box!");
 
     nodes = new double[nNodes][2];
@@ -41,6 +44,7 @@ triMesh::triMesh(double x, double y, int n)
     int iElmt = -1;
     for(int i=0; i!=n; ++i)
     {
+        elmtOnBdry[iElmt] = true;
         for(int j=0; j!=n; ++j)
         {
             ++iElmt;
@@ -60,6 +64,10 @@ triMesh::triMesh(double x, double y, int n)
 std::ostream &operator<<(std::ostream &strm, triMesh mesh)
 {
     strm << "The triMesh has " << mesh.getNumNodes() << " vertices and " << mesh.getNumElmts() << " elements.\n";
+    if(mesh.getNumNodes() > 10000)
+    {
+        return strm;
+    }
     for(int i=0; i<mesh.getNumNodes(); ++i)
     {
         strm << "Node " << i << " is (" << mesh.nodes[i][1] << ", " << mesh.nodes[i][2] << ")\n";
@@ -68,4 +76,5 @@ std::ostream &operator<<(std::ostream &strm, triMesh mesh)
     {
         strm << "Element " << i << " uses nodes " << mesh.elmts[i][1] << ", " << mesh.elmts[i][2] << ", " << mesh.elmts[i][3] << "\n";
     }
+    return strm;
 }
